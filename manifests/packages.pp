@@ -21,7 +21,7 @@ class git::packages {
 		}
 	}
 
-	if ! defined(Package[$git_packages]) {
+	if ! defined(Package['git']) {
 		package { $git_packages: before => Noop["git/packages"] }
 	}
 }
